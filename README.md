@@ -1,65 +1,55 @@
-# devsaga-extension README
+# DevSaga VS Code Extension
 
-This is the README for your extension "devsaga-extension". After writing up a brief description, we recommend including the following sections.
+Automatically detects errors in your terminal and sends them to [DevSaga](https://devsaga-app.vercel.app) for AI-powered debugging — and silently builds your personal learning profile over time.
 
-## Features
+## The idea
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Most devs fix bugs and move on. DevSaga remembers them.
 
-For example if there is an image subfolder under your extension project workspace:
+Every error you hit in VS Code gets captured, debugged with AI, and saved to your account. Over time DevSaga analyzes your bug history, finds your weak concepts, suggests free resources, and generates tests curated to exactly what you struggle with.
 
-\!\[feature X\]\(images/feature-x.png\)
+The extension is the data collection layer. Your terminal is where you actually work — so that's where DevSaga lives too.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## How it works
+
+1. Extension watches your terminal automatically
+2. When a command fails, it captures the error output
+3. A notification appears: "Error detected. Debug with DevSaga?"
+4. Click **Debug** — error is sent to DevSaga AI
+5. Get instant fix and explanation
+6. Session is saved to your account silently
+7. Over time, your [IRT dashboard](https://devsaga-app.vercel.app) shows your weak spots, suggested resources, and personalized tests
+
+## Setup
+
+### 1. Install the extension
+Clone this repo and open it in VS Code, then press `F5` to run the extension.
+
+### 2. Get your API token
+Go to [devsaga-app.vercel.app/settings](https://devsaga-app.vercel.app/settings), generate your token and copy it.
+
+### 3. Set your token in VS Code
+Press `Ctrl+Shift+P` → type **DevSaga: Set Token** → paste your token.
+
+You're ready. Every terminal error will now be debugged and tracked automatically.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- VS Code 1.80+
+- Node.js
+- A DevSaga account at [devsaga-app.vercel.app](https://devsaga-app.vercel.app)
 
-## Extension Settings
+## Tech Stack
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+- JavaScript
+- VS Code Extension API
+- DevSaga REST API
 
-For example:
+## Related
 
-This extension contributes the following settings:
+- [DevSaga Web App](https://devsaga-app.vercel.app)
+- [DevSaga GitHub](https://github.com/sandesh-Codes/devsaga)
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Author
 
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Sandesh Kumar — [@sandesh-Codes](https://github.com/sandesh-Codes)
