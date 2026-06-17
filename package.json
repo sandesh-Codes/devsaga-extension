@@ -1,0 +1,41 @@
+{
+  "name": "devsaga-extension",
+  "displayName": "devsaga-extension",
+  "description": "AI-powered debugging assistant for VS Code — powered by DevSaga",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.120.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "devsaga-extension.activate",
+        "title": "Activate DevSaga"
+      },
+      {
+        "command": "devsaga.setToken",
+        "title": "DevSaga: Set Token"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.120.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "eslint": "^9.39.3",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
