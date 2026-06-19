@@ -1,6 +1,7 @@
 {
   "name": "devsaga-extension",
   "displayName": "devsaga-extension",
+  "publisher": "devsaga",
   "description": "AI-powered debugging assistant for VS Code — powered by DevSaga",
   "version": "0.0.1",
   "engines": {
@@ -13,6 +14,11 @@
     "onStartupFinished"
   ],
   "main": "./extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sandesh-Codes/devsaga-extension"
+  },
+  "license": "MIT",
   "contributes": {
     "commands": [
       {
