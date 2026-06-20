@@ -3,7 +3,7 @@
   "displayName": "devsaga-extension",
   "publisher": "devsaga",
   "description": "AI-powered debugging assistant for VS Code — powered by DevSaga",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.120.0"
   },
